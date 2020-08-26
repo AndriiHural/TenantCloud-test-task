@@ -40,19 +40,19 @@
         <tr ng-repeat="item in $ctrl.permissionList">
             <td>{{item.section}}</td>
             <td><label class="container"><input type="checkbox" ng-model="item.permission.view"
-                        ng-click="$ctrl.handlerChange(item, $ctrl.PermissionRule.view)" >
+                        ng-click="$ctrl.permissionCheckboxHandler(item, $ctrl.PermissionRule.view)" >
                         <span class="checkmark"></span>
                         <span class="hide-on-mob">  View</span>
                          <img class="icon hide-on-pc" src="../assets/eye.svg" alt="">
                   </label></td>
             <td><label  class="container"><input type="checkbox" ng-model="item.permission.edit" ng-disabled="!item.permission.view"
-                        ng-click="$ctrl.handlerChange(item, $ctrl.PermissionRule.edit)"> 
+                        ng-click="$ctrl.permissionCheckboxHandler(item, $ctrl.PermissionRule.edit)"> 
                         <span class="checkmark"></span>
                         <span class="hide-on-mob"> Edit</span>
                         <img class="icon hide-on-pc" src="../assets/edit.svg" alt="">
                   </label></td>
             <td><label  class="container"><input type="checkbox" ng-model="item.permission.remove" ng-disabled="!item.permission.edit"
-                        ng-click="$ctrl.handlerChange(item, $ctrl.PermissionRule.remove)">
+                        ng-click="$ctrl.permissionCheckboxHandler(item, $ctrl.PermissionRule.remove)">
                         <span class="checkmark"></span>
                         <span class="hide-on-mob">Remove</span>
                         <img class="icon hide-on-pc" src="../assets/delete.svg" alt="">
