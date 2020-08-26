@@ -1,0 +1,215 @@
+.section-permission {
+  padding: 20px 10px;
+  background-color: #fff;
+}
+
+.icon {
+  height: 18px;
+}
+
+.hide-on-pc {
+  display: none;
+}
+
+table {
+  border-collapse: collapse;
+  user-select: none;
+}
+
+table,
+.btn {
+  font-size: 22px;
+}
+
+tbody {
+  padding: 10px;
+
+  td {
+    padding-top: 10px;
+    padding-right: 15px;
+
+    &:first-child {
+      min-width: 100px;
+    }
+  }
+
+  .hide-on-mob {
+    color: rgb(63, 63, 63);
+  }
+}
+
+th {
+  padding-right: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #000;
+  text-align: left;
+}
+
+.btn {
+  display: block;
+  margin: 20px 0 0 auto;
+  padding: 8px 35px;
+  border: none;
+  color: #fff;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  background-color: #40a541;
+  transition: opacity 0.3s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+    }
+}
+
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.container input[disabled] {
+  & ~ .checkmark {
+    background-color: #eee;
+  }
+}
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #40a541;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+// >992px
+@media (max-width: 992px) {
+  table,
+  .btn {
+    font-size: 20px;
+  }
+}
+
+// >768px
+@media (max-width: 768px) {
+  table,
+  .btn {
+    font-size: 18px;
+  }
+
+  .container {
+    padding-left: 25px;
+
+    .checkmark:after {
+      left: 7px;
+      top: 3px;
+      width: 4px;
+      height: 8px;
+      border-width: 0 3px 3px 0;
+    }
+  }
+
+  .checkmark {
+    height: 20px;
+    width: 20px;
+  }
+}
+
+// >576px
+@media (max-width: 576px) {
+  .hide-on-mob {
+    display: none;
+  }
+
+  .hide-on-pc {
+    display: inline-block;
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+
+    [disabled] ~ img {
+      opacity: 0.3;
+    }
+  }
+
+  table {
+    width: 100%;
+  }
+
+  tbody {
+    padding: 10px;
+
+    td {
+      padding-top: 10px;
+      padding-right: 15px;
+
+      &:first-child {
+        min-width: 60px;
+      }
+    }
+  }
+
+  .container {
+    padding-left: 25px;
+
+    .checkmark:after {
+      left: 4px;
+      top: 1px;
+      width: 4px;
+      height: 8px;
+      border-width: 0 2px 2px 0;
+    }
+  }
+
+  .checkmark {
+    height: 15px;
+    width: 15px;
+  }
+}
