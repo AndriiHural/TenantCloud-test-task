@@ -8,5 +8,5 @@ Permission settings below to set the level of access for each team member.
 
 ### How do I get set up?
 
-`<npm i>`
+`<npm i>` <br>
 `<npm start>`
